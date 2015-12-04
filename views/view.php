@@ -20,10 +20,9 @@ class View {
 		$quote = QUOTE;
 		$footer = FOOTER;
 		
-
-		
 		// include the basic HTML5 template
 		include ("template_html.php");
+
 	}
 }
 
