@@ -20,30 +20,7 @@ class View {
 		$quote = QUOTE;
 		$footer = FOOTER;
 		
-		// from the model
-		$date = $this->model->date;
-		// create the user list
-		$userList = $this->model->userList;
-		
-		$userUpdateForm = "";
-		$isUpdateUserFormVisible = false;
-		$username = "";
-		$name = "";
-		$email = "";
-		$idUser = "";
-		
-		$showerror = $this->model->showerror;
-		$errorMessage = $this->model->errormessage;
-		$successUpdateMessage = $this->model->successUpdateMessage;
-		$showUpdateSuccessMessage = $this->model->showUpdateSuccessMessage;
-		
-		if ($this->model->isUpdateUserFormVisible) {
-			$isUpdateUserFormVisible = true;
-			$username = $this->model->userInfo ["name"];
-			$surname = $this->model->userInfo ["surname"];
-			$email = $this->model->userInfo ["email"];
-			$idUser = $this->model->userID;
-		}
+
 		
 		// include the basic HTML5 template
 		include ("template_html.php");
