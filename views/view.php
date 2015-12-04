@@ -21,7 +21,7 @@ class View {
 		$footer = FOOTER;
 		
 		// include the basic HTML5 template
-		include ("template_html.php");
+		include ("view_login.php");
 
 	}
 }

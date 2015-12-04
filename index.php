@@ -5,7 +5,7 @@
  */
 include_once ("models/model.php");
 include ("controllers/controller.php");
-include ("views/view_login.php");
+include ("views/view.php");
 include "conf/config.inc.php";
 
 $action = "";
@@ -14,8 +14,8 @@ if (! empty ( $_REQUEST ['action'] ))
 
 $model = new Model ();
 $controller = new Controller ( $model, $action );
-$view_login = new View_login ( $controller, $model );
+$view= new View ( $controller, $model );
 
 // note: there is no need to echo the output (echos are within the template)
-$view_login->getHTMLOutput ();
+$view->getHTMLOutput ();
 ?>
