@@ -1,0 +1,7 @@
+ //todo  Change button colors. change register and forgot password button colors to somthing not so blinding
+ todo new forgot passsword page(not need for a while_)
+//todo reformat page so html header are in a separate file and then incude - Seperate file for headers, footers+end tags and when needed , navbar for logged in users
+
+//todo remove navbar for index page (not needed)
+
+//todo  sql users table (then do reg and login With sessions)
