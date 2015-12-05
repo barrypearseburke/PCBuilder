@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * @author Luca
  * @abstract this view is in charge of...
  * @version 1.0
@@ -12,16 +12,16 @@ class View {
 		$this->controller = $controller;
 		$this->model = $model;
 	}
-	public function getHTMLOutput() {
+	public function getHTMLOutput($page) {
 		// prepare all the variables for the template
-		
+
 		// from the config.inc.php
 		$title = TITLE_WEB_APP;
 		$quote = QUOTE;
 		$footer = FOOTER;
-		
+
 		// include the basic HTML5 template
-		include ("view_login.php");
+		include($page);
 
 	}
 }

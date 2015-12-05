@@ -15,7 +15,7 @@ if (! empty ( $_REQUEST ['action'] ))
 $model = new Model ();
 $controller = new Controller ( $model, $action );
 $view= new View ( $controller, $model );
-$page = "login_template.php";
+$page = "register_template.php";
 
 // note: there is no need to echo the output (echos are within the template)
 $view->getHTMLOutput ($page);
