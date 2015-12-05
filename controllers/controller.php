@@ -28,8 +28,8 @@ class Controller {
 				break;
 		}
 		
-		// default actions
-		$this->defaultActions ();
+		// default actions// we dont want one
+		//$this->defaultActions ();
 	}
 	public function deleteUser() {
 		if (! empty ( $_REQUEST ["idUser"] ))
@@ -66,9 +66,9 @@ class Controller {
 			}
 		}
 	}
-	public function defaultActions() {
-		$this->model->date = date ( "F j, Y, g:i a" );
-		$this->model->prepareUserList ();
-	}
+//	public function defaultActions() {
+//		$this->model->date = date ( "F j, Y, g:i a" );
+//		$this->model->prepareUserList ();
+//	}
 }
 ?>

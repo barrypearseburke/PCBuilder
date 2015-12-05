@@ -1,0 +1,5 @@
+##Change Log
+
+5/12/15 - 16:53 Removed the default action in controller. This was calling function default action in event nothing was sent
+via the action  in index(+ other pages) This was trying to connect to the users table . We dont want this.
+
