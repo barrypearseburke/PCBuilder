@@ -69,7 +69,7 @@
                     <h1><strong>PC Builder</strong> Login</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="form-horizontal">
                 <div class="col-sm-6 col-sm-offset-3 form-box">
                     <div class="form-top">
                         <div class="form-top-left">
@@ -93,9 +93,21 @@
                                 <input type="password" name="form-password" placeholder="Password..."
                                        class="form-password form-control" id="form-password">
                             </div>
+                            <div class="form-group">
                             <button type="submit" class="btn">Sign in!</button>
+                            </div>
+                            <div class="form-group">
+                                <div class = "col-sm-12 col-md-6" >
+                                <button type="button" onclick="window.location='register.php'" style="background-color:Blue" class="btn" >Register </button>
+                                    <!-- todo ,change button color to something that dosen't make eyes bleed -->
+                                    </div>
+
+                                <div class = "col-sm-12 col-md-6" >
+                                <button  type="button" style="background-color:Red" class="btn"  >Forgot Password</button>
+                                </div></div>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
