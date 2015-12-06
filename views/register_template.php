@@ -97,10 +97,9 @@
                                        class="form-email form-control" id="form-email">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="form-about-yourself">About yourself</label>
-			                        	<textarea name="form-about-yourself" placeholder="About yourself..."
-                                                  class="form-about-yourself form-control"
-                                                  id="form-about-yourself"></textarea>
+                                <label class="sr-only" for="form-password">Password</label>
+                                <input type="password" name="form-password" placeholder="Password..."
+                                       class="form-password form-control" id="form-password">
                             </div>
                             <button type="submit" class="btn">Sign me up!</button>
                         </form>
