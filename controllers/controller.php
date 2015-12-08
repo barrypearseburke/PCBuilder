@@ -40,6 +40,10 @@ class Controller {
 	public function insertNewUser() {
 		// validate the inputs (name, surname, email, password)
 		if (!empty ($_REQUEST ["fname"]) && !empty ($_REQUEST ["lname"]) && !empty ($_REQUEST ["email"]) && !empty ($_REQUEST ["password"])) {
+
+			//md5 the password
+
+			$_REQUEST ["password"] = md5($_REQUEST ["password"]);
 			$this->model->insertNewUser($_REQUEST ["fname"], $_REQUEST ["lname"], $_REQUEST ["email"], $_REQUEST ["password"]);
 		}
 	}
