@@ -12,3 +12,4 @@ to include a password instead.
 6/12/15 18:30 - Login success function added in controller folder.
                 -called in controller.
 6/12/15 18:35 - user is able to enter register succesfully.
+6/12/15 20:00 -md5 working on passwords
