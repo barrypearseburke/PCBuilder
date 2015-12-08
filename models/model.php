@@ -65,6 +65,7 @@ class Model {
 	public function __destruct() {
 		$this->DBManager->closeConnection ();
 	}
+
 }
 
 ?>

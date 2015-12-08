@@ -66,6 +66,11 @@ class Controller {
 			}
 		}
 	}
+	public  function login_success(){
+		$login_success = new login_success();
+		$login_success->login();
+		}
+
 //	public function defaultActions() {
 //		$this->model->date = date ( "F j, Y, g:i a" );
 //		$this->model->prepareUserList ();
