@@ -26,7 +26,7 @@ include_once("html_headers.php");
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 text">
-                    <h1><strong>Pc Builder</strong> Registration</h1>
+                    <h1><strong>PC Builder</strong> Registration</h1>
                 </div>
                 <div class="col-sm-5 form-box">
                     <div class="form-top">
