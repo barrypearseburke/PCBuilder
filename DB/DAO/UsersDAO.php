@@ -13,7 +13,7 @@ class UsersDAO {
 		$sql .= "FROM users ";
 		if ($id != null)
 			$sql .= "WHERE users.id=? ";
-		$sql .= "ORDER BY users.name ";
+		$sql .= "ORDER BY users.fname ";
 		
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 		$this->dbManager->bindValue ( $stmt, 1, $id, $this->dbManager->INT_TYPE );
@@ -26,14 +26,16 @@ class UsersDAO {
 		
 		return ($result);
 	}
-	public function insertNewUser($name, $surname, $email, $password) {
+
+	public function insertNewUser($fname, $lname, $email, $password)
+	{
 		$sql = "INSERT INTO users";
-		$sql .= "(name, surname, email, password) ";
+		$sql .= "(fname, lname, email, password) ";
 		$sql .= "VALUES (?,?,?,?)";
 		
 		$stmt = $this->dbManager->prepareQuery ( $sql );
-		$this->dbManager->bindValue ( $stmt, 1, $name, $this->dbManager->STRING_TYPE );
-		$this->dbManager->bindValue ( $stmt, 2, $surname, $this->dbManager->STRING_TYPE );
+		$this->dbManager->bindValue($stmt, 1, $fname, $this->dbManager->STRING_TYPE);
+		$this->dbManager->bindValue($stmt, 2, $lname, $this->dbManager->STRING_TYPE);
 		$this->dbManager->bindValue ( $stmt, 3, $email, $this->dbManager->STRING_TYPE );
 		$this->dbManager->bindValue ( $stmt, 4, $password, $this->dbManager->STRING_TYPE );
 		

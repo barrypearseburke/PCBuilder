@@ -39,8 +39,8 @@ class Controller {
 	}
 	public function insertNewUser() {
 		// validate the inputs (name, surname, email, password)
-		if (! empty ( $_REQUEST ["name"] ) && ! empty ( $_REQUEST ["surname"] ) && ! empty ( $_REQUEST ["email"] ) && ! empty ( $_REQUEST ["password"] )) {
-			$this->model->insertNewUser ( $_REQUEST ["name"], $_REQUEST ["surname"], $_REQUEST ["email"], $_REQUEST ["password"] );
+		if (!empty ($_REQUEST ["fname"]) && !empty ($_REQUEST ["lname"]) && !empty ($_REQUEST ["email"]) && !empty ($_REQUEST ["password"])) {
+			$this->model->insertNewUser($_REQUEST ["fname"], $_REQUEST ["lname"], $_REQUEST ["email"], $_REQUEST ["password"]);
 		}
 	}
 	public function prepareUserForm() {

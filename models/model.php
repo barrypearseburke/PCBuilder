@@ -37,8 +37,10 @@ class Model {
 	public function deleteUser($userId) {
 		$this->usersDAO->delete ( $userId );
 	}
-	public function insertNewUser($name, $surname, $email, $password) {
-		$this->usersDAO->insertNewUser ( $name, $surname, $email, $password );
+
+	public function insertNewUser($fname, $lname, $email, $password)
+	{
+		$this->usersDAO->insertNewUser($fname, $lname, $email, $password);
 	}
 	public function prepareUpdateUserForm($userID) {
 		$this->isUpdateUserFormVisible = true;

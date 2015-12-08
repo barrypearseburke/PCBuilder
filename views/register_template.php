@@ -80,26 +80,29 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="" method="post" class="registration-form">
+                        <form role="form" action="register.php" method="post" class="registration-form">
                             <div class="form-group">
                                 <label class="sr-only" for="form-first-name">First name</label>
-                                <input type="text" name="form-first-name" placeholder="First name..."
-                                       class="form-first-name form-control" id="form-first-name">
+                                <input type="text" name="fname" placeholder="First name..."
+                                       class="form-first-name form-control" id="fname">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-last-name">Last name</label>
-                                <input type="text" name="form-last-name" placeholder="Last name..."
-                                       class="form-last-name form-control" id="form-last-name">
+                                <input type="text" name="lname" placeholder="Last name..."
+                                       class="form-last-name form-control" id="lname">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-email">Email</label>
-                                <input type="text" name="form-email" placeholder="Email..."
-                                       class="form-email form-control" id="form-email">
+                                <input type="text" name="email" placeholder="Email..."
+                                       class="form-email form-control" id="email">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
-                                <input type="password" name="form-password" placeholder="Password..."
-                                       class="form-password form-control" id="form-password">
+                                <input type="password" name="password" placeholder="Password..."
+                                       class="form-password form-control" id="password">
+                            </div>
+                            <div class="form-group">
+                                <input type='hidden' name='action' value='insertUser'>
                             </div>
                             <button type="submit" class="btn">Sign me up!</button>
                         </form>
@@ -108,7 +111,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
