@@ -26,6 +26,12 @@ class UsersDAO {
 		
 		return ($result);
 	}
+	public function login($username,$password)
+	{
+
+
+
+	}
 
 	public function insertNewUser($fname, $lname, $email, $password)
 	{

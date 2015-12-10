@@ -26,11 +26,23 @@ class Controller {
 			case "updateUserInfo" :
 				$this->updateUserInfo ();
 				break;
+			case "login":
+				$this->login();
 		}
 		
 		// default actions// we dont want one
 		//$this->defaultActions ();
 	}
+
+	public function login(){
+		if (!empty ($_REQUEST ["uname"]) && !empty ($_REQUEST ["password"]){
+		//send email to validator
+		$_REQUEST ["password"] = md5($_REQUEST ["password"]);
+		this->$this->model->login($_REQUEST ["uname"], $_REQUEST ["password"]);
+	}
+
+	}
+
 	public function deleteUser() {
 		if (! empty ( $_REQUEST ["idUser"] ))
 			if (is_numeric ( $_REQUEST ["idUser"] ))

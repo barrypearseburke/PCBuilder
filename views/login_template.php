@@ -54,14 +54,14 @@
                             </div>
                             <div class="form-group">
                                 <div class = "col-sm-12 col-md-6" >
-                                    <button type="button" onclick="window.location='Register.php'"
-                                            style="background-color:#286090" class="btn">Register
+                                    <button type="button" onclick="window.location='../register.php'"
+                                            style="background-color:Blue" class="btn">Register
                                     </button>
                                     <!-- todo ,change button color to something that dosen't make eyes bleed -->
                                     </div>
 
                                 <div class = "col-sm-12 col-md-6" >
-                                <button  type="button" style="background-color:#c9302c" class="btn"  >Forgot Password</button>
+                                <button  type="button" style="background-color:Red" class="btn"  >Forgot Password</button>
                                 </div></div>
                         </form>
                     </div>
