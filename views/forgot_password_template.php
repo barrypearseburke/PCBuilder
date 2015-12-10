@@ -39,11 +39,19 @@
                     </div>
                     <div class="form-bottom">
                         <form role="form" action="forgot_password.php" method="post" class="forgot-password-form">
+
+                        <div class="form-group">
+                                <label class="sr-only" for="form-first-name">First name</label>
+                                <input type="text" name="fname" placeholder="First name..."
+                                       class="form-first-name form-control" id="fname">
+                            </div>
+
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="text" name="email" placeholder="Username..."
                                        class="form-username form-control" id="form-username">
                             </div>
+
                             <div class="form-group">
                             <button type="submit" class="btn" onclick="window.location='../forgot_password.php'">Submit</button>
                             </div>
