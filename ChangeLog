@@ -17,3 +17,4 @@ to include a password instead.
                 - From now on , on new pages just include the headers instead of re-creating the code.
 
 10/12/15 00:29 - Changed the Register(#286090) and Forgot password(#c9302c) buttons colours
+10/12/15 00:32 - Bug fix on the controller.
