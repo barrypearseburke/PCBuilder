@@ -24,3 +24,4 @@ to include a password instead.
 10/12/15/23:32 - Login working - Set up sessions. all okay. This was done by having it so that usersDAO called fxn in sessions file.
 10/12/15 23:32 -sessions.php file is in DAO folder. Prob should be a controller. this is  a work arround. In the spirt of MVC , should be called by controller
 
+
