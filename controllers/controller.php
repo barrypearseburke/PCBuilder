@@ -35,10 +35,10 @@ class Controller {
 	}
 
 	public function login(){
-		if (!empty ($_REQUEST ["uname"]) && !empty ($_REQUEST ["password"]){
+		if (!empty ($_REQUEST ["uname"]) && !empty ($_REQUEST ["password"])){
 		//send email to validator
 		$_REQUEST ["password"] = md5($_REQUEST ["password"]);
-		this->$this->model->login($_REQUEST ["uname"], $_REQUEST ["password"]);
+		$this->model->login($_REQUEST ["uname"], $_REQUEST ["password"]);
 	}
 
 	}
@@ -86,7 +86,10 @@ class Controller {
 		$login_success = new login_success();
 		$login_success->login();
 		}
+	public  function sessions(){
 
+
+	}
 //	public function defaultActions() {
 //		$this->model->date = date ( "F j, Y, g:i a" );
 //		$this->model->prepareUserList ();

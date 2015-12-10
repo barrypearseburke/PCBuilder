@@ -28,8 +28,21 @@ class UsersDAO {
 	}
 	public function login($username,$password)
 	{
+		$sql = "SELECT * ";
+		$sql .= "FROM users ";
+		$sql .= "where email = ? and password = ?";
 
+		$stmt = $this->dbManager->prepareQuery ( $sql );
+		$this->dbManager->bindValue ( $stmt, 1, $username, $this->dbManager->STRING_TYPE );
+		$this->dbManager->bindValue ( $stmt, 2, $password, $this->dbManager->STRING_TYPE );
+		$this->dbManager->executeQuery ( $stmt );
 
+        if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
+            //start session
+
+            return (true);
+        } else
+            return (false);
 
 	}
 
