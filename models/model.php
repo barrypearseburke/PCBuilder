@@ -33,7 +33,9 @@ class Model {
 	}
 
 	public function login($username,$password){
-		$this->usersDAO->login($username,$password);
+		 $this->usersDAO->login($username,$password);
+
+
 	}
 	public function prepareUserList() {
 		$this->userList = $this->usersDAO->get ();

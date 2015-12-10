@@ -3,8 +3,10 @@
  * @author barry and eoin
  * definition of the User DAO (database access object)
  */
+include "Session.php";
 class UsersDAO {
-	private $dbManager;
+
+    private $dbManager;
 	function UsersDAO($DBMngr) {
 		$this->dbManager = $DBMngr;
 	}
@@ -39,10 +41,15 @@ class UsersDAO {
 
         if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
             //start session
-
+            $this->sessionslogin($username);
             return (true);
         } else
             return (false);
+
+	}
+	public function sessionslogin($uname){
+		$ses = new Session();
+		$ses->login($uname);
 
 	}
 
@@ -95,5 +102,6 @@ class UsersDAO {
 		} else
 			return (false);
 	}
+
 }
 ?>

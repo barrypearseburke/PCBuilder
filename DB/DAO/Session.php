@@ -12,6 +12,8 @@ public function login($username)
 {
 
     $_SESSION['username'] = $username;
+    $_SESSION['login']='1';
+    header('Location: home.php');
 }
 
 public function destroy(){

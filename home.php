@@ -1,8 +1,11 @@
 <?php
 /**
- * @author Barry Burke and Eoin Irwin
- * @abstract setting up relationships between M-V-C components
+ * Created by PhpStorm.
+ * User: Barry and Eoin
+ * Date: 10/12/2015
+ * Time: 23:23
  */
+
 include_once ("models/model.php");
 include ("controllers/controller.php");
 include ("views/view.php");
@@ -14,8 +17,9 @@ if (! empty ( $_REQUEST ['action'] ))
 
 $model = new Model ();
 $controller = new Controller ( $model, $action );
+$controller->login_success();
 $view= new View ( $controller, $model );
-$page = "login_template.php";
+$page = "home_template.php";
 
 // note: there is no need to echo the output (echos are within the template)
 $view->getHTMLOutput ($page);

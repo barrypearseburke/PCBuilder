@@ -67,7 +67,7 @@
 
                             <div class="form-group">
                                 <div class = "col-sm-12 col-md-6" >
-                                    <button type="button" onclick="window.location='../register.php'"
+                                    <button type="button" onclick="window.location='register.php'"
                                             style="background-color:#286090" class="btn">Register
                                     </button>
                                     <!-- todo ,change button color to something that dosen't make eyes bleed -->
