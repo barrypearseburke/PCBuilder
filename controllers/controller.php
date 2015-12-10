@@ -35,10 +35,10 @@ class Controller {
 	}
 
 	public function login(){
-		if (!empty ($_REQUEST ["uname"]) && !empty ($_REQUEST ["password"]){
+		if (!empty ($_REQUEST ["uname"]) && !empty ($_REQUEST ["password"])) {
 		//send email to validator
 		$_REQUEST ["password"] = md5($_REQUEST ["password"]);
-		this->$this->model->login($_REQUEST ["uname"], $_REQUEST ["password"]);
+			$this->$this->model->login($_REQUEST ["uname"], $_REQUEST ["password"]);
 	}
 
 	}
