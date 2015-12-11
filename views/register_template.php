@@ -3,22 +3,6 @@
 include_once("html_headers.php");
 ?>
 
-<!-- Top menu -->
-<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-            </button>
-            <a class="navbar-brand" href="index.php">Login</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="top-navbar-1">
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <!-- Top content -->
 <div class="top-content">
 
@@ -61,10 +45,19 @@ include_once("html_headers.php");
                                 <input type="password" name="password" placeholder="Password..."
                                        class="form-password form-control" id="password">
                             </div>
+                            <button type="submit" class="btn">Sign me up!</button>
+
                             <div class="form-group">
+                                <div class="col-sm-12 col-md-6">
+                                    <button type="button" onclick="window.location='index.php'"
+                                            style="background-color:#286090" class="btn">Login
+                                    </button>
+                                </div>
+                                <div class="form-group">
                                 <input type='hidden' name='action' value='insertUser'>
                             </div>
-                            <button type="submit" class="btn">Sign me up!</button>
+
+
                         </form>
                     </div>
                 </div>
