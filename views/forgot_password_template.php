@@ -1,20 +1,5 @@
 <?php include_once("html_headers.php"); ?>
 
-<!-- Top menu -->
-<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-            </button>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="top-navbar-1">
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <!-- Top content -->
 <div class="top-content">
 
@@ -47,6 +32,12 @@
                             </div>
 
                             <div class="form-group">
+                                <label class="sr-only" for="form-last-name">First name</label>
+                                <input type="text" name="lname" placeholder="Last name..."
+                                       class="form-first-name form-control" id="lname">
+                            </div>
+
+                            <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="text" name="email" placeholder="Username..."
                                        class="form-username form-control" id="form-username">
@@ -55,6 +46,7 @@
                             <div class="form-group">
                             <button type="submit" class="btn" onclick="window.location='forgot_password.php'">Submit</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
