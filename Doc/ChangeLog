@@ -21,7 +21,10 @@ to include a password instead.
 10/12/15 17:28 - login page had a small bug
 10/12/15 17:30 - Added a register page and register template
 10/12/15 19:25 - Changed forgot a password requirements
-10/12/15/23:32 - Login working - Set up sessions. all okay. This was done by having it so that usersDAO called fxn in sessions file.
+10/12/15 23:32 - Login working - Set up sessions. all okay. This was done by having it so that usersDAO called fxn in sessions file.
 10/12/15 23:32 -sessions.php file is in DAO folder. Prob should be a controller. this is  a work arround. In the spirt of MVC , should be called by controller
 
-
+11/12/15 20:36 Buttons added to allow user to login (forgot password + register pages)
+11/12/15 20:45 Forgot password now has 3 fields instead of 2
+11/12/15 20:55 Home page has  temporary placeholders now
+11/12/15 21:06 Navbar for logged in user added.
