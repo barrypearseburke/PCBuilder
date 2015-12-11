@@ -10,7 +10,6 @@ include_once("html_nav_headers.php");
 ?>
 
 
-
 <?php
 /**
  * Created by PhpStorm.
@@ -18,6 +17,25 @@ include_once("html_nav_headers.php");
  * Date: 04/12/2015
  * Time: 15:47
  */
+
+echo "<center><table border=1>
+		<tr>
+		<th>Type</th>
+		    <th>Component Name</th>
+		    <th>TDP</th>
+		    <th>Info</th>
+		    <th>Edit/Update/Delete</th>
+		</tr></center>";
+//Placeholders that will be deleted after for DB
+echo "<center><table border=1>
+		<tr>
+		<th>CPU</th>
+		    <th>Intel i5 4690K</th>
+		    <th>77 watts</th>
+		    <th>3.5GhZ, 4 cores</th>
+		    <th>Insert btn</th>
+		</tr></center>";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
