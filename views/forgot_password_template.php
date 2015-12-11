@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="form-group">
-                            <button type="submit" class="btn" onclick="window.location='../forgot_password.php'">Submit</button>
+                            <button type="submit" class="btn" onclick="window.location='forgot_password.php'">Submit</button>
                             </div>
                         </form>
                     </div>
