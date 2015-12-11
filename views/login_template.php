@@ -1,20 +1,5 @@
 <?php include_once("html_headers.php"); ?>
 
-<!-- Top menu -->
-<nav class="navbar navbar-inverse navbar-no-bg" role="navigation" xmlns:background-color="http://www.w3.org/1999/xhtml">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-            </button>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="top-navbar-1">
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <!-- Top content -->
 <div class="top-content">
 
@@ -57,7 +42,6 @@
                             <div class="form-group">
                                 <input type="hidden" name="action" value="login">
                             </div>
-
 
 
                             <div class="form-group">
