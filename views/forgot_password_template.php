@@ -47,6 +47,13 @@
                             <button type="submit" class="btn" onclick="window.location='forgot_password.php'">Submit</button>
                             </div>
 
+                            <div class="form-group">
+                                <div class = "col-sm-12 col-md-6" >
+                                    <button type="button" onclick="window.location='index.php'"
+                                            style="background-color:#286090" class="btn">Login
+                                    </button>
+                                </div>
+
                         </form>
                     </div>
                 </div>
