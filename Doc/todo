@@ -11,16 +11,11 @@
 //only able to access it when you have log into the site is working.
 
 
-//todo eoin
-//todo - Design a paper design on home.php which will allow you to view all the parts and insert a new part[use horizontal form?]
-//todo - make the home page [leave fields blanks. just add placeholders. in already inserted parts]
-// tod write out sql table for parts.
-//todo - fix the forgot password to ensure all fields
+//todo Eoin
+//todo - write out sql table for parts.
 //todo - the background is making my eyes bleed, try and change it so you get a random background
 -- maybe do var1 = background1.jpg ,var2=background2.jpg . pick random and call that to screen
 // $controller->login_success(); and start_session needs to be on every caller page(home.php) to make sure users is logged in.
-//todo make navbar for logged in user and include on home.ph . remove navbar on index and register and forgotpw.
-//add button on register and remove as to be able to go back to login. Look at how index[login-template] does it
 
 //todo - want try and see can you make the navbar say "hello eoin[users name]"
 
