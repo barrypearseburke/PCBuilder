@@ -12,12 +12,12 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
             </button>
-            <a class="navbar-brand" href="index.php">Hello </a>
+            <a class="navbar-brand" >Hello </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="top-navbar-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="parts.php">Parts</a></li>
+                <li><a href="home.php">Parts</a></li>
                 <li><a href="builds.php">Builds</a></li>
                 <li><a href="analytics.php">Analytics</a></li>
                 <li><a href="logout.php">Logout </a></li>

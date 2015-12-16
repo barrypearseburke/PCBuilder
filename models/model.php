@@ -21,10 +21,11 @@ class Model {
 	public $isUpdateUserFormVisible;
 	public $userInfo;
 	public $userID;
-	public $errormessage;
+	public $errormessage ;
 	public $showerror = False;
 	public $showUpdateSuccessMessage = false;
 	public $successUpdateMessage;
+	public $bademailvar = false;
 	
 	public function __construct() {
 		$this->DBManager = new pdoDBManager ();
@@ -66,6 +67,10 @@ class Model {
 		$this->showUpdateSuccessMessage = True;
 		$this->successUpdateMessage = SUCCESS_UPDATE_USER;
 		$this->prepareUpdateUserForm($userID);
+	}
+	public function bademail(){
+		$this->errormessage = BADEMAIL;
+		$this->bademailvar = true;
 	}
 	
 	public function __destruct() {

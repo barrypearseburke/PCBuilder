@@ -7,16 +7,7 @@
  */
 include_once("html_nav_headers.php");
 
-?>
 
-
-<?php
-/**
- * Created by PhpStorm.
- * User: Eoin's
- * Date: 04/12/2015
- * Time: 15:47
- */
 
 echo "<center><table border=1>
 		<tr>

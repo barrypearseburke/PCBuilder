@@ -38,9 +38,14 @@ class Controller {
 	public function login(){
 		if (!empty ($_REQUEST ["username"]) && !empty ($_REQUEST ["password"])){
 		//send email to validator
-		$_REQUEST ["password"] = md5($_REQUEST ["password"]);
-		$this->model->login($_REQUEST ["username"], $_REQUEST ["password"]);
 
+			if($this -> isemailvalid($_REQUEST ["username"]));
+			{
+
+
+				$_REQUEST ["password"] = md5($_REQUEST ["password"]);
+				$this->model->login($_REQUEST ["username"], $_REQUEST ["password"]);
+			}
 
 	}
 
@@ -93,6 +98,26 @@ class Controller {
 	public function sessionslogin($uname){
 		$ses = new Session();
 		$ses->login($uname);
+
+	}
+
+
+
+	public function  isemailvalid($validemail){
+
+
+
+		// create an instance of the validation function suite
+		$validationSuite = new validation_functions ();
+
+		// validate email
+		if (($validationSuite->isEmailValid ( $validemail))) {
+
+			return true;
+		}
+		else
+			$this->model->bademail();
+			return false;
 
 	}
 //	public function defaultActions() {
