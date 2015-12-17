@@ -8,8 +8,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,3 +43,12 @@
 </head>
 
 <body>
+
+<script type="text/javascript">
+    var bgcount = 7;
+    function changebg() {
+        var num = Math.ceil(Math.random() * bgcount);
+        document.body.background = 'styles/assets/img/backgrounds/' + num + '.png';
+    }
+    changebg();
+</script>
