@@ -10,15 +10,19 @@ include_once("html_nav_headers.php");
 
 ?>
 <div id ="addnewpart">
-<label> Hello eoin , its your best friend</label>
+    <label> Add a new part</label>
 <form class="form-inline"">
 
     <select class="form-control" style="height:50px ">
         <option>CPU</option>
-        <option>Stroage</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        <option>PSU</option>
+        <option>RAM</option>
+        <option>Case</option>
+        <option>Storage</option>
+        <option>Software</option>
+        <option>Motherboard</option>
+        <option>External Drive</option>
+        <option>Graphics Card</option>
     </select>
 
 
@@ -37,7 +41,7 @@ include_once("html_nav_headers.php");
   </div>
 
     <div class="form-group">
-        <input type="NUMBER" class="form-control" id="price" placeholder="price">
+        <input type="number" class="form-control" id="price" placeholder="Price">
     </div>
 
 <div class="form-group">
@@ -46,10 +50,6 @@ include_once("html_nav_headers.php");
 
 </form>
 </div>
-
-
-
-
 
 
 <?php
