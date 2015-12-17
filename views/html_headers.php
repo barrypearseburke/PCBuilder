@@ -45,7 +45,7 @@
 <body>
 
 <script type="text/javascript">
-    var bgcount = 7;
+    var bgcount = 6;
     function changebg() {
         var num = Math.ceil(Math.random() * bgcount);
         document.body.background = 'styles/assets/img/backgrounds/' + num + '.png';
