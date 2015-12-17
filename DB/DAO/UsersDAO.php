@@ -8,13 +8,14 @@ include "Session.php";
 class UsersDAO {
 	public $ses;
     private $dbManager;
+	private $userstable = USERSTABLE;
 	function UsersDAO($DBMngr) {
 		$this->dbManager = $DBMngr;
 		$this->ses = new Session();
 	}
 	public function get($id = null) {
 		$sql = "SELECT * ";
-		$sql .= "FROM users ";
+		$sql .= "FROM $this->userstable";
 		if ($id != null)
 			$sql .= "WHERE users.id=? ";
 		$sql .= "ORDER BY users.fname ";
@@ -34,7 +35,7 @@ class UsersDAO {
 	{
 
 		$sql = "SELECT fname ";
-		$sql .= "FROM users ";
+		$sql .= "FROM $this->userstable ";
 		$sql .= "where email = ? and password = ?";
 
 

@@ -33,3 +33,4 @@ to include a password instead.
 16/12/15 01:20 To get it working on other pages. call fxn in controller.(such as update) is isemailvalid() and on template page include bademail.php
 
 17/12/15 18:40 Whenever a user is logged in, it will now display their name like "Hello Mark".
+17/12/15 22:20 form done on home page for build.
