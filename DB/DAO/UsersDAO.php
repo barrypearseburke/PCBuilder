@@ -4,11 +4,13 @@
  * definition of the User DAO (database access object)
  */
 include "Session.php";
-class UsersDAO {
 
+class UsersDAO {
+	public $ses;
     private $dbManager;
 	function UsersDAO($DBMngr) {
 		$this->dbManager = $DBMngr;
+		$this->ses = new Session();
 	}
 	public function get($id = null) {
 		$sql = "SELECT * ";
@@ -30,26 +32,44 @@ class UsersDAO {
 	}
 	public function login($username,$password)
 	{
-		$sql = "SELECT * ";
+
+		$sql = "SELECT fname ";
 		$sql .= "FROM users ";
 		$sql .= "where email = ? and password = ?";
+
 
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 		$this->dbManager->bindValue ( $stmt, 1, $username, $this->dbManager->STRING_TYPE );
 		$this->dbManager->bindValue ( $stmt, 2, $password, $this->dbManager->STRING_TYPE );
+
 		$this->dbManager->executeQuery ( $stmt );
 
         if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
             //start session
+
+			while ($row = $this->dbManager->getNextRow($stmt)) {
+				$fname = $row['fname'];
+
+				$this->addNameSession($fname);
+
+			}
             $this->sessionslogin($username);
-            return (true);
+
+			return (true);
         } else
             return (false);
+	}
+
+	public function sessionslogin($uname){
+
+		$this->ses->login($uname);
 
 	}
-	public function sessionslogin($uname){
-		$ses = new Session();
-		$ses->login($uname);
+
+	public function addNameSession($fname)
+	{
+
+		$this->ses->addNameSession($fname);
 
 	}
 

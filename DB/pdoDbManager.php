@@ -43,6 +43,7 @@ class pdoDbManager {
 		$rows = $stmt->fetchAll ( PDO::FETCH_ASSOC );
 		return ($rows);
 	}
+
 	function getNextRow($stmt) {
 		$result = $stmt->fetch ( PDO::FETCH_ASSOC );
 		return ($result);
