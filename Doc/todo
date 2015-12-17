@@ -12,12 +12,9 @@
 
 
 //todo Eoin
-//todo - write out sql table for parts.
 //todo - the background is making my eyes bleed, try and change it so you get a random background
 -- maybe do var1 = background1.jpg ,var2=background2.jpg . pick random and call that to screen
 // $controller->login_success(); and start_session needs to be on every caller page(home.php) to make sure users is logged in.
-
-//todo - want try and see can you make the navbar say "hello eoin[users name]"
 
 //Todo Barry
 // todo add new part backend
