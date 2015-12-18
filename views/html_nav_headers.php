@@ -9,13 +9,13 @@
 <!-- Top menu -->
 <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
     <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header" id="navleft">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
             </button>
             <a class="navbar-brand">Hello <?php echo $_SESSION['fname']; ?></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="top-navbar-1">
+        <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php">Parts</a></li>
                 <li><a href="builds.php">Builds</a></li>

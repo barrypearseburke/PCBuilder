@@ -2,3 +2,14 @@
 
     color: white !important;
 }
+
+#navbar {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+#navleft {
+    letter-spacing: 2px;
+    font-size: 17px;
+}
