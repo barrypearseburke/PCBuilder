@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  *//*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-    font-family: "Ubuntu Light", sans-serif;
+    font-family: "Ubuntu Light";
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -110,7 +110,7 @@ code, kbd, pre, samp {
 
 button, input, optgroup, select, textarea {
     margin: 0;
-    font: inherit;
+    font: "Ubuntu Light";
     color: inherit
 }
 
@@ -1363,7 +1363,7 @@ body {
 }
 
 button, input, select, textarea {
-    font-family: inherit;
+    font-family: "Ubuntu Light";
     font-size: inherit;
     line-height: inherit
 }
@@ -1452,7 +1452,7 @@ hr {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
+    font-family: "Ubuntu Light";
     font-weight: 500;
     line-height: 1.1;
     color: inherit
