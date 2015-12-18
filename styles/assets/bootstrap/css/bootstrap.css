@@ -6,7 +6,7 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -128,7 +128,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     font-size: 1em;
 }
 
@@ -1411,7 +1411,7 @@ html {
 }
 
 body {
-    font-family: "Ubuntu Light", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
@@ -1422,7 +1422,7 @@ input,
 button,
 select,
 textarea {
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     font-size: inherit;
     line-height: inherit;
 }
@@ -1528,7 +1528,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
@@ -1934,7 +1934,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
 }
 
 code {
@@ -7134,7 +7134,7 @@ button.close {
     position: absolute;
     z-index: 1070;
     display: block;
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     font-size: 12px;
     font-weight: normal;
     line-height: 1.4;
@@ -7257,7 +7257,7 @@ button.close {
     display: none;
     max-width: 276px;
     padding: 1px;
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     font-size: 14px;
     font-weight: normal;
     line-height: 1.42857143;
@@ -7555,7 +7555,7 @@ button.close {
     width: 20px;
     height: 20px;
     margin-top: -10px;
-    font-family: "Ubuntu Light";
+    font-family: "Arial";
     line-height: 1;
 }
 
