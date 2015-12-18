@@ -13,7 +13,7 @@ include_once("html_nav_headers.php");
     <label> Add a new part</label>
 <form class="form-inline"">
 
-    <select class="form-control" style="height:50px ">
+    <select class="form-control" name="type" style="height:50px">
         <option>CPU</option>
         <option>PSU</option>
         <option>RAM</option>
@@ -27,24 +27,24 @@ include_once("html_nav_headers.php");
 
 
     <div class="form-group">
-        <input type="text" class="form-control" id="Component " placeholder="Component name ">
+        <input type="text" class="form-control" name="Component " placeholder="Component name ">
     </div>
 
 
     <div class="form-group">
-        <input type="text" class="form-control" id="TDP" placeholder="TDP">
+        <input type="text" class="form-control" name="TDP" placeholder="TDP">
     </div>
 
 
   <div class="form-group">
-    <input type="text" class="form-control" id="Info" placeholder="Info">
+    <input type="text" class="form-control" name="Info" placeholder="Info">
   </div>
 
-    <div class="form-group">
-        <input type="number" class="form-control" id="price" placeholder="Price">
+    <div class="form-group" >
+        <input type="number" class="form-control" name="price" placeholder="Price"  style="height:50px;" >
     </div>
 
-<div class="form-group">
+<div class="form-group" >
     <button type="submit" class="btn">Add Part</button>
 </div>
 

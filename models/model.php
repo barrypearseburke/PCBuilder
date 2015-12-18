@@ -26,6 +26,7 @@ class Model {
 	public $showUpdateSuccessMessage = false;
 	public $successUpdateMessage;
 	public $bademailvar = false;
+	public $returnvalue = true;
 	
 	public function __construct() {
 		$this->DBManager = new pdoDBManager ();
@@ -34,8 +35,10 @@ class Model {
 	}
 
 	public function login($username,$password){
-		 $this->usersDAO->login($username,$password);
-
+		$returnvalue =$this->usersDAO->login($username,$password);
+		if ($returnvalue = false){
+			$this->bademail();
+		}
 
 	}
 	public function prepareUserList() {

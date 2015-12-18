@@ -29,6 +29,9 @@ class Controller {
 				break;
 			case "login":
 				$this->login();
+			//case "addNewPart":
+			//	$this->newPart();
+
 		}
 		
 		// default actions// we dont want one
@@ -48,8 +51,24 @@ class Controller {
 			}
 
 	}
+		//if password is nothing
+		$this->model->bademail();
 
 	}
+
+//	public function addNewPart(){
+//		if (!empty ($_REQUEST ["type"]) && !empty ($_REQUEST ["Component"]) && !empty ($_REQUEST ["TDP"]) && !empty ($_REQUEST ["Info"]) && !empty ($_REQUEST ["price"])) {
+//
+//		//send to model
+//
+//
+//		}
+//		//tell them error
+//
+//
+//
+//
+//	}
 
 	public function deleteUser() {
 		if (! empty ( $_REQUEST ["idUser"] ))

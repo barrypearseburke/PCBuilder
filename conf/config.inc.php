@@ -18,7 +18,7 @@ define("USERSTABLE","users");
 define ( "TITLE_WEB_APP", "Web dev. & dep." );
 define ( "QUOTE", "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. (Enstein)" );
 define ( "FOOTER", "Name, surname, Student number - copyright" );
-define ( "BADEMAIL", " There is a problem with your email address. Please Correct");
+define ( "BADEMAIL", " There is a problem with your email address or password. Please Correct");
 define ( "SUCCESS_UPDATE_USER", " The user has been succesfully updated");
 
 
