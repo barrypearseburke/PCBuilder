@@ -73,10 +73,7 @@ class Controller {
 
             }
             //tell them error
-
-
         }
-
 
 	public function logout()
 	{
@@ -148,15 +145,10 @@ class Controller {
 	public function sessionslogin($uname){
 		$ses = new Session();
 		$ses->login($uname);
-
 	}
 
-
-
-	public function  isemailvalid($validemail){
-
-
-
+	public function isemailvalid($validemail)
+	{
 		// create an instance of the validation function suite
 		$validationSuite = new validation_functions ();
 
@@ -168,7 +160,6 @@ class Controller {
 		else
 			$this->model->bademail();
 			return false;
-
 	}
 //	public function defaultActions() {
 //		$this->model->date = date ( "F j, Y, g:i a" );

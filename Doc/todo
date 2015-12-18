@@ -11,12 +11,12 @@
 //only able to access it when you have log into the site is working.
 
 
-//todo Eoin
+//Todo Eoin
 // $controller->login_success(); and start_session needs to be on every caller page(home.php) to make sure users is logged in.
+//todo validation on register page if wrong details are entered
+//todo validation on the insert page
+//todo Seperate validation on price on the insert page
+//todo place email validation on all email inputs
 
 //Todo Barry
-// todo add new part backend
-//todo display existing parts in form.
-//todo ..add more todos.
-//todo place email vallidation on all email inputs
-todo is password wrong.
+//todo display existing parts in form through a search.
