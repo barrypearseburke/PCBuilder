@@ -20,7 +20,6 @@ define ( "QUOTE", "Two things are infinite: the universe and human stupidity; an
 define ( "FOOTER", "Name, surname, Student number - copyright" );
 define ( "BADEMAIL", " There is a problem with your email address or password. Please Correct");
 define ( "SUCCESS_UPDATE_USER", " The user has been succesfully updated");
-
-
+define("LOGOUT", " The user has been succesfully Logged out");
 
 ?>

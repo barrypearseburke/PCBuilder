@@ -8,14 +8,14 @@
  */
 class Session
 {
-public function login($username)
-{
+    public function login($username)
+    {
 
-    $_SESSION['username'] = $username;
+        $_SESSION['username'] = $username;
 
-    $_SESSION['login'] = '1'; // so to check if there is any user logged in
-    header('Location: home.php');
-}
+        $_SESSION['login'] = '1'; // so to check if there is any user logged in
+        header('Location: home.php');
+    }
 
     public function addNameSession($fname)
     {
@@ -24,8 +24,9 @@ public function login($username)
 
     }
 
-public function destroy(){
-    session_destroy();
-}
+    public function destroy()
+    {
+        session_destroy();
+    }
 
 }

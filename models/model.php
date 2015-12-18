@@ -8,12 +8,13 @@
 // includes the DB manager
 include ("DB/pdoDBManager.php");
 include ("DB/DAO/UsersDAO.php");
+include_once("DB/DAO/Session.php");
 class Model {
 	// private variables
 	private $DBManager = null;
 	private $dbLink = null;
 	private $usersDAO = null;
-	
+	public $session;
 	// public variables
 	public $str;
 	public $date;
@@ -35,8 +36,8 @@ class Model {
 	}
 
 	public function login($username,$password){
-		$returnvalue =$this->usersDAO->login($username,$password);
-		if ($returnvalue = false){
+		$returnvalue = $this->usersDAO->login($username, $password);
+		if ($returnvalue == false) {
 			$this->bademail();
 		}
 
@@ -75,7 +76,7 @@ class Model {
 		$this->errormessage = BADEMAIL;
 		$this->bademailvar = true;
 	}
-	
+
 	public function __destruct() {
 		$this->DBManager->closeConnection ();
 	}

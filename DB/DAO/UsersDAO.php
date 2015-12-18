@@ -3,7 +3,7 @@
  * @author barry and eoin
  * definition of the User DAO (database access object)
  */
-include "Session.php";
+include_once "Session.php";
 
 class UsersDAO {
 	public $ses;
