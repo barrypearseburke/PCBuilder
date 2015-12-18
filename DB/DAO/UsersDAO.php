@@ -9,6 +9,7 @@ class UsersDAO {
 	public $ses;
     private $dbManager;
 	private $userstable = USERSTABLE;
+	private $parts = PARTS;
 	function UsersDAO($DBMngr) {
 		$this->dbManager = $DBMngr;
 		$this->ses = new Session();
@@ -31,6 +32,33 @@ class UsersDAO {
 		
 		return ($result);
 	}
+
+	public function newPart($owner,$type,$name,$tdp,$info,$price){
+
+		$sql = "INSERT INTO $this->parts";
+		$sql .= "(owner, type, componentname, tdp,info,price) ";
+		$sql .= "VALUES (?,?,?,?,?,?)";
+
+		$stmt = $this->dbManager->prepareQuery ( $sql );
+		$this->dbManager->bindValue($stmt, 1, $owner, $this->dbManager->STRING_TYPE);
+		$this->dbManager->bindValue($stmt, 2, $type, $this->dbManager->STRING_TYPE);
+		$this->dbManager->bindValue ( $stmt, 3, $name, $this->dbManager->STRING_TYPE );
+		$this->dbManager->bindValue ( $stmt, 4, $tdp, $this->dbManager->STRING_TYPE );
+
+		$this->dbManager->bindValue ( $stmt, 5, $info, $this->dbManager->STRING_TYPE );
+
+		$this->dbManager->bindValue ( $stmt, 6, $price, $this->dbManager->INT_TYPE );
+
+		$this->dbManager->executeQuery ( $stmt );
+
+		if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
+			return (true);
+		} else
+			return (false);
+	}
+
+
+
 	public function login($username,$password)
 	{
 
@@ -76,7 +104,7 @@ class UsersDAO {
 
 	public function insertNewUser($fname, $lname, $email, $password)
 	{
-		$sql = "INSERT INTO users";
+		$sql = "INSERT INTO $this->userstable";
 		$sql .= "(fname, lname, email, password) ";
 		$sql .= "VALUES (?,?,?,?)";
 		

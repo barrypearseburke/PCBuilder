@@ -7,8 +7,6 @@
  */
 include "validationSuite.php";
 include "login_success.php";
-include_once("DB/DAO/Session.php");
-
 class Controller {
 	private $model;
 	private $action;
@@ -31,6 +29,8 @@ class Controller {
 				break;
 			case "login":
 				$this->login();
+			case "addNewPart":
+				$this->newPart();
 				break;
 			case "logout":
 				$this->logout();
@@ -61,6 +61,21 @@ class Controller {
 		$this->model->bademail();
 
 	}
+
+	public function newPart(){
+
+		if (!empty ($_REQUEST ["type"]) && !empty ($_REQUEST ["Component"]) && !empty ($_REQUEST ["TDP"]) && !empty ($_REQUEST ["Info"]) && !empty ($_REQUEST ["price"]))
+
+            if (isset($_SESSION['username'])) {
+                $owner = $_SESSION["username"];
+                //send to model
+                $this->model->newPart($owner, $_REQUEST ["type"], $_REQUEST ["Component"], $_REQUEST ["TDP"], $_REQUEST ["Info"], $_REQUEST ["price"]);
+
+            }
+            //tell them error
+
+
+        }
 
 
 	public function logout()

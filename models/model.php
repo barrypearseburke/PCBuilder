@@ -42,6 +42,13 @@ class Model {
 		}
 
 	}
+	public function newPart($owner,$type,$name,$tdp,$info,$price)
+	{
+
+		$this->usersDAO->newPart($owner,$type,$name,$tdp,$info,$price);
+	}
+
+
 	public function prepareUserList() {
 		$this->userList = $this->usersDAO->get ();
 	}
