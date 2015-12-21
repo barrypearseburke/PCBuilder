@@ -35,14 +35,68 @@ class Controller {
 			case "logout":
 				$this->logout();
 				break;
-			//case "addNewPart":
-			//	$this->newPart();
+			case "displayparts";
+				$this->getparts();
+				break;
 
 		}
 		
 		// default actions// we dont want one
 		//$this->defaultActions ();
 	}
+	public function getparts()
+	{
+		if (empty ($_REQUEST ["type"])) {
+			$_REQUEST ["type"] = "is not null";
+
+		} else {
+
+			$_REQUEST ["type"] = "='{$_REQUEST ["type"]}'";
+		} //this is so that if there is a value, It is entered into the db where type =value, and if there isent a value, the same sql statment will work without changes
+
+
+		if (empty ($_REQUEST ["Component"])) {
+			$_REQUEST ["Component"] = "is not null";
+
+		} else {
+
+			$_REQUEST ["Component"] = "='{$_REQUEST ["Component"]}'";
+		}
+
+
+		if (empty ($_REQUEST ["TDP"])) {
+			$_REQUEST ["TDP"] = "is not null";
+
+		} else {
+
+			$_REQUEST ["TDP"] = "='{$_REQUEST ["TDP"]}'";
+
+
+		}
+
+		if (empty ($_REQUEST ["Info"])) {
+			$_REQUEST ["Info"] = "is not null";
+
+		} else {
+
+			$_REQUEST ["Info"] = "='{$_REQUEST ["Info"]}'";
+		}
+
+		if (empty ($_REQUEST ["price"])) {
+			$_REQUEST ["price"] = "is not null";
+
+		} else {
+
+			$_REQUEST ["price"] = "='{$_REQUEST ["price"]}'";
+
+		}
+		$_SESSION['username'] = "'{$_SESSION['username']}'";
+
+		$this->model->getparts($_SESSION['username'], $_REQUEST ["type"], $_REQUEST ["Component"], $_REQUEST ["TDP"], $_REQUEST ["Info"], $_REQUEST ["price"]);
+
+	}
+
+
 
 	public function login(){
 		if (!empty ($_REQUEST ["username"]) && !empty ($_REQUEST ["password"])){
@@ -82,21 +136,6 @@ class Controller {
 		$session = new Session();
 		$session->destroy();
 	}
-
-
-//	public function addNewPart(){
-//		if (!empty ($_REQUEST ["type"]) && !empty ($_REQUEST ["Component"]) && !empty ($_REQUEST ["TDP"]) && !empty ($_REQUEST ["Info"]) && !empty ($_REQUEST ["price"])) {
-//
-//		//send to model
-//
-//
-//		}
-//		//tell them error
-//
-//
-//
-//
-//	}
 
 	public function deleteUser() {
 		if (! empty ( $_REQUEST ["idUser"] ))

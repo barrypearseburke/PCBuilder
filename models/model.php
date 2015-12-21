@@ -28,6 +28,7 @@ class Model {
 	public $successUpdateMessage;
 	public $bademailvar = false;
 	public $returnvalue = true;
+	public $partsList;
 	
 	public function __construct() {
 		$this->DBManager = new pdoDBManager ();
@@ -42,6 +43,13 @@ class Model {
 		}
 
 	}
+
+	public function getparts($owner,$type,$name,$tdp,$info,$price){
+
+		$this->partsList = $this->usersDAO->getparts($owner,$type,$name,$tdp,$info,$price);
+
+	}
+
 	public function newPart($owner,$type,$name,$tdp,$info,$price)
 	{
 

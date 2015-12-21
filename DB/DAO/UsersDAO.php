@@ -33,6 +33,36 @@ class UsersDAO {
 		return ($result);
 	}
 
+	public function getparts($owner,$type,$name,$tdp,$info,$price){
+		$sql = "SELECT * ";
+		$sql .= "FROM $this->parts ";
+		$sql .= "WHERE owner = ? and type ? and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price}";
+		var_dump($sql);
+		$stmt = $this->dbManager->prepareQuery ( $sql );
+
+//		//binds
+	$this->dbManager->bindValue ( $stmt, 1, $owner, $this->dbManager->STRING_TYPE );
+//
+		$this->dbManager->bindValue ( $stmt, 2, $type, $this->dbManager->STRING_TYPE );
+//		$this->dbManager->bindValue ( $stmt, 3, $name, $this->dbManager->STRING_TYPE );
+//
+//		$this->dbManager->bindValue ( $stmt, 4, $tdp, $this->dbManager->STRING_TYPE );
+//
+//		$this->dbManager->bindValue ( $stmt, 5, $info, $this->dbManager->STRING_TYPE );
+//
+//		$this->dbManager->bindValue ( $stmt, 6, $price, $this->dbManager->INT_TYPE );
+
+
+
+
+		$results =$this->dbManager->executeQuery ( $stmt );
+
+		//get parts.
+
+		return $results;
+	}
+
+
 	public function newPart($owner,$type,$name,$tdp,$info,$price){
 
 		$sql = "INSERT INTO $this->parts";
