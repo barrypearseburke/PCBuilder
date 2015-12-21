@@ -28,23 +28,23 @@
                         <div class="form-group">
                                 <label class="sr-only" for="form-first-name">First name</label>
                                 <input type="text" name="fname" placeholder="First name..."
-                                       class="form-first-name form-control" id="fname">
+                                       class="form-first-name form-control" id="fname" required class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="sr-only" for="form-last-name">First name</label>
                                 <input type="text" name="lname" placeholder="Last name..."
-                                       class="form-first-name form-control" id="lname">
+                                       class="form-first-name form-control" id="lname" required class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="text" name="email" placeholder="Username..."
-                                       class="form-username form-control" id="form-username">
+                                       class="form-username form-control" id="form-username" required class="form-control">
                             </div>
 
                             <div class="form-group">
-                            <button type="submit" class="btn" onclick="window.location='forgot_password.php'">Submit</button>
+                            <button type="submit" class="btn">Submit</button>
                             </div>
 
                             <div class="form-group">

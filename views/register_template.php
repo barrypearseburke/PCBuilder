@@ -28,22 +28,22 @@ include_once("html_headers.php");
                             <div class="form-group">
                                 <label class="sr-only" for="form-first-name">First name</label>
                                 <input type="text" name="fname" placeholder="First name..."
-                                       class="form-first-name form-control" id="fname">
+                                       class="form-first-name form-control" id="fname" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-last-name">Last name</label>
                                 <input type="text" name="lname" placeholder="Last name..."
-                                       class="form-last-name form-control" id="lname">
+                                       class="form-last-name form-control" id="lname" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-email">Email</label>
-                                <input type="text" name="email" placeholder="Email..."
-                                       class="form-email form-control" id="email">
+                                <input type="email" name="email" placeholder="Email..."
+                                       class="form-email form-control" id="email" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="password" placeholder="Password..."
-                                       class="form-password form-control" id="password">
+                                       class="form-password form-control" id="password" required class="form-control">
                             </div>
                             <button type="submit" class="btn">Sign me up!</button>
 
