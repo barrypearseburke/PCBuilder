@@ -27,21 +27,22 @@ include_once("html_nav_headers.php");
 
 
     <div class="form-group">
-        <input type="text" class="form-control" name="Component" placeholder="Component name ">
+        <input type="text" class="form-control" name="Component" placeholder="Component name" required
+               class="form-control">
     </div>
 
 
     <div class="form-group">
-        <input type="text" class="form-control" name="TDP" placeholder="TDP">
+        <input type="text" class="form-control" name="TDP" placeholder="TDP" required class="form-control">
     </div>
 
 
   <div class="form-group">
-    <input type="text" class="form-control" name="Info" placeholder="Info">
+      <input type="text" class="form-control" name="Info" placeholder="Info" required class="form-control">
   </div>
 
     <div class="form-group" >
-        <input type="number" class="form-control" name="price" placeholder="Price"  style="height:50px;" >
+        <input type="number" class="form-control" name="price" placeholder="Price" required class="form-control">
     </div>
     <div class="form-group">
         <input type="hidden" name="action" value="addNewPart">
