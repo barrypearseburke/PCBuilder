@@ -36,14 +36,22 @@ class UsersDAO {
 	public function getparts($owner,$type,$name,$tdp,$info,$price){
 		$sql = "SELECT * ";
 		$sql .= "FROM $this->parts ";
-		$sql .= "WHERE owner = ? and type ? and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price}";
+		$sql .= "WHERE owner = {$owner} and type {$type} and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price}";
 		var_dump($sql);
+		var_dump($type);
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 
+		 //we cant use binds. This is because binds place ' ' around the value. However, in the controller we have already added
+		// $varname = "= '{$varname}'" . The reason for this is , that if its empty, it will replace the value of $varname
+		//with "is not null". Using binds dosent work as it always will try and place '' arround everything.
+		//3 hours of debbuging right there.
+
+
+
 //		//binds
-	$this->dbManager->bindValue ( $stmt, 1, $owner, $this->dbManager->STRING_TYPE );
+//	$this->dbManager->bindValue ( $stmt, 1, $owner, $this->dbManager->STRING_TYPE );
 //
-		$this->dbManager->bindValue ( $stmt, 2, $type, $this->dbManager->STRING_TYPE );
+//		$this->dbManager->bindValue ( $stmt, 2, $type, $this->dbManager->STRING_TYPE );
 //		$this->dbManager->bindValue ( $stmt, 3, $name, $this->dbManager->STRING_TYPE );
 //
 //		$this->dbManager->bindValue ( $stmt, 4, $tdp, $this->dbManager->STRING_TYPE );
