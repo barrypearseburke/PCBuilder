@@ -10,6 +10,7 @@ class UsersDAO {
     private $dbManager;
 	private $userstable = USERSTABLE;
 	private $parts = PARTS;
+	public $results;
 	function UsersDAO($DBMngr) {
 		$this->dbManager = $DBMngr;
 		$this->ses = new Session();
@@ -37,8 +38,7 @@ class UsersDAO {
 		$sql = "SELECT * ";
 		$sql .= "FROM $this->parts ";
 		$sql .= "WHERE owner = {$owner} and type {$type} and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price}";
-		var_dump($sql);
-		var_dump($type);
+
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 
 		 //we cant use binds. This is because binds place ' ' around the value. However, in the controller we have already added
@@ -63,11 +63,13 @@ class UsersDAO {
 
 
 
-		$results =$this->dbManager->executeQuery ( $stmt );
+		 $this->dbManager->executeQuery ( $stmt );
 
 		//get parts.
+		$this->results = $this->dbManager->fetchResults ( $stmt );
 
-		return $results;
+
+		return $this->results;
 	}
 
 

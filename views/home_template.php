@@ -58,7 +58,7 @@ include_once("html_nav_headers.php");
 <div id="showparts">
     <label>Search Parts</label>
     <form role="form" class="form-inline" action="home.php"  method="post">
-        <form role="form" class="form-inline" action="home.php"  method="post">
+
 
             <select class="form-control"   name="type" style="height:50px">
                 <option>CPU</option>
@@ -98,8 +98,10 @@ include_once("html_nav_headers.php");
             <div class="form-group" >
                 <button type="submit" class="btn">Search</button>
             </div>
+        </form>
 
 </div>
+<?php include("Showparts.php") ?>
 
 
 <?php

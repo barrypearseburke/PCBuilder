@@ -90,9 +90,9 @@ class Controller {
 			$_REQUEST ["price"] = "='{$_REQUEST ["price"]}'";
 
 		}
-		$_SESSION['username'] = "'{$_SESSION['username']}'";
+		$username = "'{$_SESSION['username']}'";
 
-		$this->model->getparts($_SESSION['username'], $_REQUEST ["type"], $_REQUEST ["Component"], $_REQUEST ["TDP"], $_REQUEST ["Info"], $_REQUEST ["price"]);
+		$this->model->getparts($username, $_REQUEST ["type"], $_REQUEST ["Component"], $_REQUEST ["TDP"], $_REQUEST ["Info"], $_REQUEST ["price"]);
 
 	}
 

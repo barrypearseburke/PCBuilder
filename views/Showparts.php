@@ -27,8 +27,7 @@ $partstable = /** @lang html */
         </tr>
 
     </thead>";
-
-foreach ( $partsList as $parts => $row )
+foreach ( $this->model->partsList as $parts => $row )
 {
     $partstable .= "<tr>";
 
