@@ -38,3 +38,12 @@ to include a password instead.
 
 18/12/15 21:45 Logout working, will now redirect to the index.php
 18/12/15 22:00 Add new part working on the parts page
+
+20/12/15 23:45 validation on the insert page for price
+20/12/15 23:55 Add new part working on the parts page
+
+21/12/15 00:15 Stopping user pressing add a part with nothing in fields
+21/12/15 00:20 Fixed that number field and got rid of the Styling within the home template
+21/12/15 00:25 Email checking will now require the @ symbol
+21/12/15 00:30 Added in email input type to have the same size input field
+21/12/15 00:40 Changed error message, spelt correctly now too
