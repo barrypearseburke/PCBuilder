@@ -2,8 +2,8 @@
 // $controller->login_success(); and start_session needs to be on every caller page(home.php) to make sure users is logged in.
 //todo validation on register page if wrong details are entered
 //todo validation on the insert page
-//todo Seperate validation on price on the insert page
 //todo place email validation on all email inputs
+//todo Put student number, name, surname of the members of the group as well as the group name in the footer of your web-site, so it is clearly visible in the browser.
 
 //Todo Barry
 //todo display existing parts in form through a search.
