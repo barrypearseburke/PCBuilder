@@ -18,7 +18,6 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php">Parts</a></li>
-                <li><a href="builds.php">Builds</a></li>
                 <li><a href="analytics.php">Analytics</a></li>
                 <li><a href="logout.php">Logout </a></li>
 

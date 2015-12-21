@@ -37,7 +37,7 @@ class UsersDAO {
 	public function getparts($owner,$type,$name,$tdp,$info,$price){
 		$sql = "SELECT * ";
 		$sql .= "FROM $this->parts ";
-		$sql .= "WHERE owner = {$owner} and type {$type} and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price}";
+		$sql .= "WHERE owner = {$owner} and type {$type} and componentname {$name} and tdp {$tdp} and info {$info} and  price {$price} order by type";
 
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 

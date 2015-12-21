@@ -61,6 +61,7 @@ include_once("html_nav_headers.php");
 
 
             <select class="form-control"   name="type" style="height:50px">
+                <option></option>
                 <option>CPU</option>
                 <option>PSU</option>
                 <option>RAM</option>
