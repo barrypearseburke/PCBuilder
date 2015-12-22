@@ -8,13 +8,14 @@
 
 $partstable = /** @lang html */
     "<center><table border=1>
+		<br>
 		<tr>
 		    <th>Type</th>
             <th>Name</th>
             <th>TDP</th>
             <th>Info</th>
             <th>Price</th>
-            <th>Delete user</th>
+            <th>Delete</th>
 		</tr></center>";
 foreach ( $this->model->partsList as $parts => $row )
 {
@@ -49,7 +50,6 @@ foreach ( $this->model->partsList as $parts => $row )
     $partstable .= "</center>";
     $partstable .= "</form>";
     $partstable .= "</td>";
-
 
     $partstable .= "</tr>";
 }
