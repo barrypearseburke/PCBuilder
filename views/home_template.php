@@ -89,7 +89,7 @@ include_once("html_nav_headers.php");
             </div>
 
             <div class="form-group" >
-                <input type="number" class="form-control" name="price" placeholder="Price"  style="height:50px;" >
+                <input type="number" class="form-control" name="price" placeholder="Price">
             </div>
 
             <div class="form-group">

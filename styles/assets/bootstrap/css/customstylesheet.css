@@ -3,7 +3,7 @@ html {
     color: blue !important;
 }
 
-#addnewpart{
+#addnewpart, #showparts {
 
     color: white !important;
 }

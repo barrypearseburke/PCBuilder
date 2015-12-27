@@ -7,30 +7,19 @@
 */
 
 $partstable = /** @lang html */
-    "<table class=\"table\">
-
-<thead>
-
-        <tr>
-
-            <th>Type</th>
-
+    "<center><table border=1>
+		<br>
+		<tr>
+		    <th>Type</th>
             <th>Name</th>
-
-
             <th>TDP</th>
-
             <th>Info</th>
-
-             <th>Price</th>
-
-        </tr>
-
-    </thead>";
+            <th>Price</th>
+            <th>Delete</th>
+		</tr></center>";
 foreach ( $this->model->partsList as $parts => $row )
 {
     $partstable .= "<tr>";
-
     $partstable .= "<td>";
     $partstable .= $row["type"];
     $partstable .= "</td>";
@@ -51,8 +40,27 @@ foreach ( $this->model->partsList as $parts => $row )
     $partstable .= $row["price"];
     $partstable .= "</td>";
 
+    // delete form
+    $partstable .= "<td>";
+    $partstable .= "<center>";
+    $partstable .= " <form action='home.php' method='post'>";
+    $partstable .= " <input type='submit' class='btn btn-danger btn-xs' value='X'>";
+    $partstable .= " <input type='hidden' name='action' value='delete'>";
+    $partstable .= " <input type='hidden' name='id' value='$row[id]'>";
+    $partstable .= "</center>";
+    $partstable .= "</form>";
+    $partstable .= "</td>";
 
     $partstable .= "</tr>";
 }
 echo $partstable;
 ?>
+
+<style>
+    tr:nth-child(even) {
+        background: #ffffff
+    }
+
+    tr:nth-child(odd) {
+        background: #286090
+    }</style>
