@@ -39,6 +39,7 @@ class Model {
 	public function login($username,$password){
 		$returnvalue = $this->usersDAO->login($username, $password);
 		if ($returnvalue == false) {
+			$this->errormessage = BADEMAIL;
 			$this->bademail();
 		}
 
@@ -66,7 +67,20 @@ class Model {
 
 	public function insertNewUser($fname, $lname, $email, $password)
 	{
-		$this->usersDAO->insertNewUser($fname, $lname, $email, $password);
+		$returnvalue = $this->usersDAO->insertNewUser($fname, $lname, $email, $password);
+		if ($returnvalue == false) {
+			$this->errormessage = REGAlREADY;
+			$this->bademail();
+		}
+		if ($returnvalue == true){
+			$this->errormessage = SUCCESS_ADD_USER;
+			$this->bademail();
+			echo '<meta http-equiv="refresh" content="1;URL=\'index.php\'">';
+
+
+
+
+		}
 	}
 	public function prepareUpdateUserForm($userID) {
 		$this->isUpdateUserFormVisible = true;
@@ -88,7 +102,7 @@ class Model {
 		$this->prepareUpdateUserForm($userID);
 	}
 	public function bademail(){
-		$this->errormessage = BADEMAIL;
+		$this->errormessage = $this->errormessage;
 		$this->bademailvar = true;
 	}
 

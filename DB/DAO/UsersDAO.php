@@ -144,6 +144,8 @@ class UsersDAO {
 
 	public function insertNewUser($fname, $lname, $email, $password)
 	{
+
+
 		$sql = "INSERT INTO $this->userstable";
 		$sql .= "(fname, lname, email, password) ";
 		$sql .= "VALUES (?,?,?,?)";

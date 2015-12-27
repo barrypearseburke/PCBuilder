@@ -18,11 +18,16 @@ include_once("html_headers.php");
                             <h3>Sign up now</h3>
 
                             <p>Fill in the form below to get instant access:</p>
+                            <?php include ("bademail.php")?>
                         </div>
+
                         <div class="form-top-right">
                             <i class="fa fa-pencil"></i>
+
                         </div>
+
                     </div>
+
                     <div class="form-bottom">
                         <form role="form" action="register.php" method="post" class="registration-form">
                             <div class="form-group">

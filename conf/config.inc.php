@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Luca
- * this file contains the constants used across 
- * all the script in the web-application
- */
-
 /* database constants */
 define ( "DB_HOST", "localhost" ); // set database host
 define ( "DB_USER", "root" ); // set database user
@@ -20,7 +14,9 @@ define ( "TITLE_WEB_APP", "Web dev. & dep." );
 define ( "QUOTE", "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. (Enstein)" );
 define ( "FOOTER", "Name, surname, Student number - copyright" );
 define("BADEMAIL", "Incorrect email or password, please try again");
+define("REGAlREADY", "It appears you already have an account. Please check Your details.");
 define ( "SUCCESS_UPDATE_USER", " The user has been succesfully updated");
+define ( "SUCCESS_ADD_USER", " The user has been succesfully Added. Redirecting to login");
 define("LOGOUT", " The user has been succesfully Logged out");
 
 ?>
