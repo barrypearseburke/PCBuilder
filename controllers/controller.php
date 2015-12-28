@@ -111,9 +111,11 @@ class Controller {
 			}
 
 	}
-		//if password is nothing
-		$this->model->bademail();
+		else {
 
+			$this->model->errormessage = BADEMAIL;
+			$this->model->bademail();
+		}
 	}
 
 	public function newPart(){
@@ -149,9 +151,20 @@ class Controller {
 
 			//md5 the password
 
-			$_REQUEST ["password"] = md5($_REQUEST ["password"]);
-			$this->model->insertNewUser($_REQUEST ["fname"], $_REQUEST ["lname"], $_REQUEST ["email"], $_REQUEST ["password"]);
+
+
+			if($this -> isemailvalid($_REQUEST ["username"]));
+			{
+				$_REQUEST ["password"] = md5($_REQUEST ["password"]);
+
+				$this->model->insertNewUser($_REQUEST ["fname"], $_REQUEST ["lname"], $_REQUEST ["email"], $_REQUEST ["password"]);
+		}}
+		else {
+
+			$this->model->errormessage = BADEMAIL;
+			$this->model->bademail();
 		}
+
 	}
 	public function prepareUserForm() {
 		if (! empty ( $_REQUEST ["idUser"] ))

@@ -22,37 +22,37 @@
                             <i class="fa fa-key"></i>
                         </div>
                     </div>
-                    <div class="form-bottom">
-                        <form role="form" action="forgot_password.php" method="post" class="forgot-password-form">
-
-                        <div class="form-group">
+   <div class="form-bottom">
+                        <form role="form" action="register.php" method="post" class="registration-form">
+                            <div class="form-group">
                                 <label class="sr-only" for="form-first-name">First name</label>
                                 <input type="text" name="fname" placeholder="First name..."
                                        class="form-first-name form-control" id="fname" required class="form-control">
                             </div>
-
                             <div class="form-group">
-                                <label class="sr-only" for="form-last-name">First name</label>
+                                <label class="sr-only" for="form-last-name">Last name</label>
                                 <input type="text" name="lname" placeholder="Last name..."
-                                       class="form-first-name form-control" id="lname" required class="form-control">
+                                       class="form-last-name form-control" id="lname" required class="form-control">
                             </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="email" name="email" placeholder="Email..."
+                                       class="form-email form-control" id="email" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-password">Password</label>
+                                <input type="password" name="password" placeholder="Password..."
+                                       class="form-password form-control" id="password" required class="form-control">
+                            </div>
+                            <button type="submit" class="btn">Reset!</button>
 
                             <div class="form-group">
-                                <label class="sr-only" for="form-username">Username</label>
-                                <input type="text" name="email" placeholder="Username..."
-                                       class="form-username form-control" id="form-username" required class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                            <button type="submit" class="btn">Submit</button>
-                            </div>
-
-                            <div class="form-group">
-                                <div class = "col-sm-12 col-md-6" >
+                                <div class="col-sm-12 col-md-6">
                                     <button type="button" onclick="window.location='index.php'"
                                             style="background-color:#286090" class="btn">Login
                                     </button>
                                 </div>
+
 
                         </form>
                     </div>
