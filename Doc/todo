@@ -6,3 +6,4 @@ right so , can you do analytics & make nice and delete
 /barry todo
 upload and validation and error messages forgot password . Update
 //add lables on reg and forgot pw. Change username to email or vice versa
+// add fxn that will take users name and lname and email and make all small characters

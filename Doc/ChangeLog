@@ -54,3 +54,4 @@ to include a password instead.
 21/12/15 17:06 Headings colour changes
 27/12/15 2:05 **MADE EMAIL AN UNIQUE KEY IN DB*
 27/12/15 2:35, Progress on validation. Register user will have a message saying if they were succesfully added and if not, Told they have already registered.
+30/12/15 2:57 forgot pw working + email validation

@@ -39,11 +39,40 @@ class Controller {
 				$this->getparts();
 				break;
 
+			case "resetpw";
+				$this->resetpw();
+				break;
 		}
 		
 		// default actions// we dont want one
 		//$this->defaultActions ();
 	}
+	public  function resetpw(){
+
+
+		if (!empty ($_REQUEST ["fname"]) && !empty ($_REQUEST ["lname"]) && !empty ($_REQUEST ["email"]) && !empty ($_REQUEST ["password"])) {
+
+			//md5 the password
+
+
+
+			if($this -> isemailvalid($_REQUEST ["email"]));
+			{
+				$_REQUEST ["password"] = md5($_REQUEST ["password"]);
+
+				$this->model->resetpw($_REQUEST ["fname"], $_REQUEST ["lname"], $_REQUEST ["email"], $_REQUEST ["password"]);
+			}}
+		else {
+
+			$this->model->errormessage = BADEMAIL;
+			$this->model->bademail();
+		}
+
+	}
+
+
+
+
 	public function getparts()
 	{
 		if (empty ($_REQUEST ["type"])) {

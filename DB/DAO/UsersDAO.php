@@ -142,6 +142,25 @@ class UsersDAO {
 
 	}
 
+	public function  resetpw($fname, $lname, $email, $password){
+		$sql = "UPDATE $this->userstable ";
+		$sql .=" SET password = ?" ;
+		$sql .= "where fname = ? and lname = ? and email = ? ";
+
+		$stmt = $this->dbManager->prepareQuery ( $sql );
+		$this->dbManager->bindValue ( $stmt, 1, $password, $this->dbManager->STRING_TYPE );
+		$this->dbManager->bindValue($stmt, 2, $fname, $this->dbManager->STRING_TYPE);
+		$this->dbManager->bindValue($stmt, 3, $lname, $this->dbManager->STRING_TYPE);
+		$this->dbManager->bindValue ( $stmt, 4, $email, $this->dbManager->STRING_TYPE );
+		$this->dbManager->executeQuery ( $stmt );
+		if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
+			return (true);
+		} else
+			return (false);
+	}
+
+
+
 	public function insertNewUser($fname, $lname, $email, $password)
 	{
 

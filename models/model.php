@@ -45,6 +45,34 @@ class Model {
 
 	}
 
+
+
+
+
+	public function resetpw($fname, $lname, $email, $password)
+	{
+		$returnvalue = $this->usersDAO->resetpw($fname, $lname, $email, $password);
+
+		if ($returnvalue == false) {
+			$this->errormessage = MISMATCH;
+			$this->bademail();
+		}
+		if ($returnvalue == true){
+			$this->errormessage = SUCCESS_UPDATE_USER;
+			$this->bademail();
+			echo '<meta http-equiv="refresh" content="3;URL=\'index.php\'">';
+
+
+
+
+		}
+	}
+
+
+
+
+
+
 	public function getparts($owner,$type,$name,$tdp,$info,$price){
 
 		$this->partsList = $this->usersDAO->getparts($owner,$type,$name,$tdp,$info,$price);
@@ -75,7 +103,7 @@ class Model {
 		if ($returnvalue == true){
 			$this->errormessage = SUCCESS_ADD_USER;
 			$this->bademail();
-			echo '<meta http-equiv="refresh" content="1;URL=\'index.php\'">';
+			echo '<meta http-equiv="refresh" content="3;URL=\'index.php\'">';
 
 
 
