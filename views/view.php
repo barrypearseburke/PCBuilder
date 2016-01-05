@@ -15,10 +15,7 @@ class View {
 	public function getHTMLOutput($page) {
 		// prepare all the variables for the template
 
-		// from the config.inc.php
-		$title = TITLE_WEB_APP;
-		$quote = QUOTE;
-		$footer = FOOTER;
+
 
 		// include the basic HTML5 template
 		include($page);

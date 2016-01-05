@@ -11,7 +11,7 @@ include ("controllers/controller.php");
 include ("views/view.php");
 include "conf/config.inc.php";
 session_start();
-$action = "";
+$action = "displayparts";
 if (! empty ( $_REQUEST ['action'] ))
     $action = $_REQUEST ['action'];
 

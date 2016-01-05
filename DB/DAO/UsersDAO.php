@@ -113,7 +113,8 @@ class UsersDAO {
 
 		$this->dbManager->executeQuery ( $stmt );
 
-        if ($this->dbManager->getNumberOfAffectedRows ( $stmt ) == 1) {
+        if ($this->dbManager->getNumberOfAffectedRows ( $stmt )
+				== 1) {
             //start session
 
 			while ($row = $this->dbManager->getNextRow($stmt)) {
