@@ -30,21 +30,29 @@ include_once("html_headers.php");
 
                     <div class="form-bottom">
                         <form role="form" action="register.php" method="post" class="registration-form">
+
+                            <label>First Name</label>
                             <div class="form-group">
                                 <label class="sr-only" for="form-first-name">First name</label>
                                 <input type="text" name="fname" placeholder="First name..."
                                        class="form-first-name form-control" id="fname" required class="form-control">
                             </div>
+
+                            <label>Last Name</label>
                             <div class="form-group">
                                 <label class="sr-only" for="form-last-name">Last name</label>
                                 <input type="text" name="lname" placeholder="Last name..."
                                        class="form-last-name form-control" id="lname" required class="form-control">
                             </div>
+
+                            <label>Email</label>
                             <div class="form-group">
                                 <label class="sr-only" for="form-email">Email</label>
                                 <input type="email" name="email" placeholder="Email..."
                                        class="form-email form-control" id="email" required class="form-control">
                             </div>
+
+                            <label>Password</label>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="password" placeholder="Password..."

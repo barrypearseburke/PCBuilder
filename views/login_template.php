@@ -24,12 +24,15 @@
                         </div>
                     </div>
                     <div class="form-bottom">
+                        <label>Username</label>
                         <form role="form" action="index.php" method="post" class="login-form">
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="email" name="username" placeholder="Username..."
                                        class="form-username form-control" id="form-username">
                             </div>
+
+                            <label>Password</label>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="password" placeholder="Password..."
