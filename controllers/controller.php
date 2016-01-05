@@ -171,6 +171,7 @@ class Controller {
 	public function deleteUser() {
 		if (! empty ( $_REQUEST ["idUser"] ))
 			if (is_numeric ( $_REQUEST ["idUser"] ))
+				$_REQUEST ["idUser"] = (int)($_REQUEST ["idUser"]);
 				if ($_REQUEST ["idUser"] >= 0)
 					$this->model->deleteUser ( $_REQUEST ["idUser"] );
 	}

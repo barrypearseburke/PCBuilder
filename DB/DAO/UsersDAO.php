@@ -183,13 +183,15 @@ class UsersDAO {
 			return (false);
 	}
 	public function delete($userID) {
-		$sql = "DELETE FROM users ";
+		$sql = "DELETE FROM $this->parts ";
 		$sql .= "WHERE id=? ";
-		
+
+
 		$stmt = $this->dbManager->prepareQuery ( $sql );
 		$this->dbManager->bindValue ( $stmt, 1, $userID, $this->dbManager->INT_TYPE );
 		$result = $this->dbManager->executeQuery ( $stmt );
-		
+
+
 		return ($result);
 	}
 	public function search($str) {

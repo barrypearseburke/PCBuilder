@@ -6,6 +6,9 @@
 * Time: 22:32
 */
 
+$idUser = $this->model->userID;
+
+
 $partstable = /** @lang html */
     "<center><table border=1>
 		<br>
@@ -46,7 +49,7 @@ foreach ( $this->model->partsList as $parts => $row )
     $partstable .= " <form action='home.php' method='post'>";
     $partstable .= " <input type='submit' class='btn btn-danger btn-xs' value='X'>";
     $partstable .= " <input type='hidden' name='action' value='delete'>";
-    $partstable .= " <input type='hidden' name='id' value='$row[id]'>";
+    $partstable .= " <input type='hidden' name='idUser' value='$row[id]'>";
     $partstable .= "</center>";
     $partstable .= "</form>";
     $partstable .= "</td>";
