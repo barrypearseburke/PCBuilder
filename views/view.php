@@ -1,10 +1,5 @@
 <?php
-/**
- *
- * @author Luca
- * @abstract this view is in charge of...
- * @version 1.0
- */
+
 class View {
 	private $model;
 	private $controller;

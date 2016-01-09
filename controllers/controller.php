@@ -42,11 +42,54 @@ class Controller {
 			case "resetpw";
 				$this->resetpw();
 				break;
+
+
+			case "upload";
+				$this->upload();
+				break;
 		}
-		
-		// default actions// we dont want one
-		//$this->defaultActions ();
+
 	}
+
+
+	public function upload(){
+//w3 schools file upload
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	if($check !== false) {
+
+		$uploadOk = 1;
+	} else {
+
+		$this->model->errormessage = UPLOADSUCCESS;
+		$this->model->bademail();
+
+	}
+}
+
+if ($uploadOk == 0) {
+	echo "Sorry, your file was not uploaded.";
+} else {
+	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+
+		$this->model->errormessage = UPLOADSUCCESS;
+		$this->model->bademail();
+	} else {
+		$this->model->errormessage = UPLOADFAIL;
+		$this->model->bademail();
+	}
+}
+
+
+}
+
+
+
 	public  function resetpw(){
 
 
@@ -202,23 +245,7 @@ class Controller {
 				if ($_REQUEST ["idUser"] >= 0)
 					$this->model->prepareUpdateUserForm ( $_REQUEST ["idUser"] );
 	}
-	public function updateUserInfo() {
-		// validate the inputs (name, surname, email, password)
-		if (! empty ( $_REQUEST ["idUser"] ) && ! empty ( $_REQUEST ["name"] ) && ! empty ( $_REQUEST ["surname"] ) && ! empty ( $_REQUEST ["email"] )) {
-			$this->model->isUpdateUserFormVisible = True;
-			
-			// create an instance of the validation function suite
-			$validationSuite = new validation_functions ();
-			
-			// validate email
-			if ($validationSuite->isEmailValid ( $_REQUEST ["email"] )) {
-				$this->model->updateExistingUser ( $_REQUEST ["idUser"], $_REQUEST ["name"], $_REQUEST ["surname"], $_REQUEST ["email"] );
-				$this->model->setUpdateUserSuccessMessage ($_REQUEST ["idUser"]);
-			} else {
-				$this->model->setUpdateUserErrorMessage ($_REQUEST ["idUser"]);
-			}
-		}
-	}
+
 	public  function login_success(){
 		$login_success = new login_success();
 		$login_success->login();
@@ -243,9 +270,5 @@ class Controller {
 			$this->model->bademail();
 			return false;
 	}
-//	public function defaultActions() {
-//		$this->model->date = date ( "F j, Y, g:i a" );
-//		$this->model->prepareUserList ();
-//	}
 }
 ?>

@@ -19,6 +19,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php">Parts</a></li>
                 <li><a href="analytics.php">Analytics</a></li>
+                <li><a href="fileupload.php">FileUpload</a></li>
                 <li><a href="logout.php">Logout </a></li>
 
             </ul>

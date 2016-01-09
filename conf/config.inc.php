@@ -19,5 +19,6 @@ define ( "SUCCESS_UPDATE_USER", " The user has been succesfully updated");
 define ( "SUCCESS_ADD_USER", " The user has been succesfully Added. Redirecting to login");
 define("LOGOUT", " The user has been succesfully Logged out");
 define("MISMATCH", " The details do not match. Please Correct and try again");
-
+define("UPLOADSUCCESS", "Your file was uploaded succesfully");
+define("UPLOADFAIL", "ERROR, Your file failed to uplaod");
 ?>

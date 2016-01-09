@@ -86,9 +86,7 @@ class Model {
 	}
 
 
-	public function prepareUserList() {
-		$this->userList = $this->usersDAO->get ();
-	}
+
 	public function deleteUser($userId) {
 		$this->usersDAO->delete ( $userId );
 	}
@@ -110,19 +108,8 @@ class Model {
 
 		}
 	}
-	public function prepareUpdateUserForm($userID) {
-		$this->isUpdateUserFormVisible = true;
-		$this->userInfo = $this->usersDAO->get ( $userID );
-		$this->userID = $userID;
-	}
-	public function updateExistingUser($existingID, $name, $surname, $email) {
-		$this->usersDAO->updateExistingUser ( $existingID, $name, $surname, $email );
-	}
-	public function setUpdateUserErrorMessage($userID) {
-		$this->showerror = True;
-		$this->errormessage = ERROR_EXISTING_USER;
-		$this->prepareUpdateUserForm($userID);
-	}
+
+
 	
 	public function setUpdateUserSuccessMessage($userID){
 		$this->showUpdateSuccessMessage = True;
