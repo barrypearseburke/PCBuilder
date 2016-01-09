@@ -94,4 +94,7 @@ include_once("footer.php");
         stroke: #fff;
     }
 
-</style>
+</style><?php
+
+include_once("html_footers.php");
+?>
