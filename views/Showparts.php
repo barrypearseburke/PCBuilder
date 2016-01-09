@@ -5,6 +5,7 @@
 * Date: 19/12/2015
 * Time: 22:32
 */
+include_once("footer.php");
 
 $idUser = $this->model->userID;
 

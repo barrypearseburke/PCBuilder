@@ -7,7 +7,7 @@
  */
 include_once("html_headers.php");
 include_once("html_nav_headers.php");
-
+include_once("html_footers.php");
 ?>
 <div id ="addnewpart">
     <label> Add a new part</label>
@@ -103,9 +103,3 @@ include_once("html_nav_headers.php");
 
 </div>
 <?php include("Showparts.php") ?>
-
-
-<?php
-
-include_once("html_footers.php");
-?>

@@ -1,5 +1,6 @@
 <?php  include_once("html_headers.php");
 include_once("html_nav_headers.php");
+include_once("footer.php");
 ?>
 
 

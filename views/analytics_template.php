@@ -2,10 +2,13 @@
 
 include_once("html_headers.php");
 include_once("html_nav_headers.php");
+include_once("footer.php");
 
 ?>
 <!DOCTYPE html>
 <meta charset="utf-8">
+
+
 <style>
     .chart1 {
         height: 70px;
@@ -30,19 +33,28 @@ include_once("html_nav_headers.php");
     .chart2 .bar {
         fill: red;
     }
+
+    label {
+        color: white;
+    }
 </style>
-<svg class="chart1" data-bar-chart data-data="23,43,10,13,10,20,30,23,43,10,13,10" data-bar-width="20"></svg>
-<svg class="chart2" data-bar-chart data-data="19,65,23,31,32,44,5,32,23,23,54,65" data-bar-width="20"></svg>
+
+<center>
+    <svg class="chart1" data-bar-chart data-data="20,80" data-bar-width="60"></svg>
+    <label>Parts per user</label>
+    <svg class="chart2" data-bar-chart data-data="48,52" data-bar-width="80"></svg>
+    <label>Average cost per user</label></center>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+
 <script>
     $('[data-bar-chart]').each(function (i, svg) {
         var $svg = $(svg);
         var data = $svg.data('data').split(',').map(function (datum) {
             return parseFloat(datum);
         });
-        var barWidth = parseFloat($svg.data('bar-width')) || 11;
+        var barWidth = parseFloat($svg.data('bar-width')) || 1;
         var barSpace = parseFloat($svg.data('bar-space')) || 4;
         var chartHeight = $svg.outerHeight();
         var y = d3.scale.linear()
@@ -61,7 +73,7 @@ include_once("html_nav_headers.php");
             .attr("height", 0)
             .transition()
             .delay(function (d, i) {
-                return i * 100;
+                return i * 40;
             })
             .attr("y", function (d, i) {
                 return chartHeight - y(d);
@@ -71,3 +83,15 @@ include_once("html_nav_headers.php");
             });
     });
 </script>
+
+<style>
+    .arc text {
+        font: 10px sans-serif;
+        text-anchor: middle;
+    }
+
+    .arc path {
+        stroke: #fff;
+    }
+
+</style>
