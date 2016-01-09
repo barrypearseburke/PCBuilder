@@ -9,7 +9,7 @@
 
 <div class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="navbar-text float right">
-        <p class="navbar-text">Eoin Irwin | C13439802 | Barry Burke | C13479802 | Group H</p>
+        <p class="navbar-text">Eoin Irwin | C13439802 | Barry Burke | C13427078 | Group H</p>
     </div>
 </div>
 </div>
