@@ -10,9 +10,7 @@ define ( "DB_DEBUGMODE", true ); // set database charset
 define("USERSTABLE","users"); //users login table
 define("PARTS","parts"); //parts table.
 
-define ( "TITLE_WEB_APP", "Web dev. & dep." );
-define ( "QUOTE", "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. (Enstein)" );
-define ( "FOOTER", "Name, surname, Student number - copyright" );
+
 define("BADEMAIL", "Incorrect email or password, please try again");
 define("REGAlREADY", "It appears you already have an account. Please check Your details.");
 define ( "SUCCESS_UPDATE_USER", " The user has been succesfully updated");
